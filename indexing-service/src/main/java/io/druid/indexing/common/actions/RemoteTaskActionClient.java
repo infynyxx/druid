@@ -95,7 +95,7 @@ public class RemoteTaskActionClient implements TaskActionClient
 
         try {
           response = httpClient.go(
-              new Request(HttpMethod.GET, serviceUri.toURL())
+              new Request(HttpMethod.POST, serviceUri.toURL())
                   .setContent(MediaType.APPLICATION_JSON, dataToSend),
               new StatusResponseHandler(Charsets.UTF_8)
           ).get();
