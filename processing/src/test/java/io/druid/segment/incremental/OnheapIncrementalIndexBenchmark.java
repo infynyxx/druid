@@ -191,7 +191,6 @@ public class OnheapIncrementalIndexBenchmark extends AbstractBenchmark
     }
   }
 
-
   @Parameterized.Parameters
   public static Collection<Object[]> getParameters()
   {
@@ -221,7 +220,7 @@ public class OnheapIncrementalIndexBenchmark extends AbstractBenchmark
     return new MapBasedInputRow(timestamp, dimensionList, builder.build());
   }
 
-  @Test
+  //@Test
   @BenchmarkOptions(callgc = true, clock = Clock.REAL_TIME, warmupRounds = 10, benchmarkRounds = 20)
   public void testConcurrentAddRead()
       throws InterruptedException, ExecutionException, NoSuchMethodException, IllegalAccessException,

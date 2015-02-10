@@ -171,7 +171,7 @@ public class BenchmarkIndexibleWrites extends AbstractBenchmark
   private final Integer totalIndexSize = 1<<20;
 
   @BenchmarkOptions(warmupRounds = 100, benchmarkRounds = 100, clock = Clock.REAL_TIME, callgc = true)
-  @Test
+  //@Test
   /**
    * CALLEN - 2015-01-15 - OSX - Java 1.7.0_71-b14
    BenchmarkIndexibleWrites.testConcurrentWrites[0]: [measured 100 out of 200 rounds, threads: 1 (sequential)]
@@ -230,7 +230,7 @@ public class BenchmarkIndexibleWrites extends AbstractBenchmark
 
    */
   @BenchmarkOptions(warmupRounds = 100, benchmarkRounds = 100, clock = Clock.REAL_TIME, callgc = true)
-  @Test
+  //@Test
   public void testConcurrentReads() throws ExecutionException, InterruptedException
   {
     final ListeningExecutorService executorService = MoreExecutors.listeningDecorator(
